@@ -34,7 +34,7 @@ The following pages describe how this IG's API is used in specific deployment co
 
 #### EHR System Deployment
 
-- [**Organization Internal Exchange**](usecase-ehr-internal.html) — EHR systems within a healthcare provider: internal document exchange, on-demand document patterns, and the organizational and vendor-level facade pattern.
+- [**Organization-Internal Exchange**](usecase-ehr-internal.html) — EHR systems within a healthcare provider: internal document exchange, on-demand document patterns, and the organizational and vendor-level facade pattern.
 
 - [**Cross-Organization via National Infrastructure**](usecase-cross-org.html) — EHR systems as nodes in national health data infrastructure. Covers federated and central-repository national patterns and draws the boundary between EHR API obligations and national infrastructure.
 
