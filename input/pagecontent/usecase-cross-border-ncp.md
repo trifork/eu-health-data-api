@@ -14,8 +14,8 @@ NCPs communicate with each other via the **MyHealth@EU network**. When a **patie
 
 ### Actor Groupings
 
-- **NCP or National Infrastructure** acts as [Document Consumer](actors.html#document-consumer) (according to [Grouping Example 1, 1b, 1c or 2](actors.html#example-groupings)) or [Resource Consumer](actors.html#resource-exchange) (according to [Grouping Example 3](actors.html#example-groupings))
-- **EHR systems** act as [Document Access Provider](actors.html#document-access-provider) or [Resource Access Provider](actors.html#resource-exchange) accordingly
+- **NCP or National Infrastructure** acts as [Document Consumer](actors.html#document-consumer) (according to [Grouping Example 1, 1b, 1c or 2](actors.html#example-groupings)) or [Resource Consumer](actors.html#resource-consumer) (according to [Grouping Example 3](actors.html#example-groupings))
+- **EHR systems** act as [Document Access Provider](actors.html#document-access-provider) or [Resource Access Provider](actors.html#resource-access-provider) accordingly
 
 ### Architecture
 

@@ -4,7 +4,7 @@ This page describes the two primary national architectural patterns and how EHR 
 
 ### National Infrastructure is Out of Scope
 
-The EHDS Regulation places the obligation to build and operate national health data infrastructure on **Member States** (Arts 4, 12, 23) — not on EHR vendors. This IG defines the API contract at the EHR system boundary. How Member States structure their national infrastructure is their decision; this IG does not prescribe it.
+The EHDS Regulation places the obligation to build and operate national health data interoperability infrastructure on **Member States** (Arts 4, 12, 23). This IG defines the API contract at the EHR system boundary, and informative examples how this might be useful in different member state . How Member States structure their national infrastructure is their decision; this IG does not prescribe it.
 
 The two patterns below are **informative examples** of how national infrastructure can use this IG's API.
 
@@ -17,18 +17,18 @@ EHR systems publish documents to a national (or regional) repository. Consumers 
 ```
 EHR System A ──[ITI-105 publish]──▶ National Repository ──[ITI-67/68 query]──▶ HPAS / NCP
 EHR System B ──[ITI-105 publish]──▶         ▲
-EHR System C ──[ITI-105 publish]──┘
+EHR System C ──[ITI-105 publish]─────────────┘
 ```
 
 **EHR system role:** [Document Publisher](actors.html#document-publisher) — submits documents via ITI-105. The national repository acts as the [Document Access Provider](actors.html#document-access-provider); EHR systems do not need to host a query API.
 
-**Common in:** Many existing national XDS deployments. Repository may be FHIR-native or XDS-backed behind an MHD facade. See [Relationship to XDS and FHIR Document Sharing](background-xds-fhir.html) for how these backends differ technically.
+**Common in:** Existing national XDS/XCA deployments. Repository may be FHIR-native or XDS-backed behind an MHD facade. See [Relationship to XDS/FHIR Document Sharing](background-xds-fhir.html) for how these backends differ technically.
 
 ---
 
 ### Pattern 2 — Federated Query
 
-Data stays at the EHR system. A national record locator routes queries to the relevant EHR systems; responses are aggregated by the national layer.
+Data stays at the EHR system. A national record locator routes queries to the relevant EHR systems; responses may be aggregated by the national layer.
 
 ```
 HPAS / NCP ──▶ Record Locator ──[ITI-67/68]──▶ EHR System A  (this IG's API)
@@ -39,12 +39,6 @@ HPAS / NCP ──▶ Record Locator ──[ITI-67/68]──▶ EHR System A  (th
 **EHR system role:** [Document Access Provider](actors.html#document-access-provider) — hosts a query and retrieval API. The national record locator is a [Document Consumer](actors.html#document-consumer) of each EHR's API.
 
 **Common in:** Netherlands, Sweden (national record locator with patient identifier resolution at the national layer). EHR systems expose a conformant API endpoint; the national layer handles routing and aggregation.
-
----
-
-### Hybrid
-
-Some Member States operate both patterns simultaneously — some EHR systems publish to a central repository while others are queried directly. A national gateway unifies access behind a single query surface. The EHR API contract (this IG) applies at each EHR system boundary regardless of the national pattern.
 
 ---
 

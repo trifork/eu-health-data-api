@@ -2,11 +2,11 @@
 
 ## Introduction
 
-This document explores the different APIs that are relevant in the context of EHDS. The purpose of this document is to create a shared terminology and architecture related to those APIs, and provide initial options and background for elements related to these APIs and allow linkage of EHDS requirements defined by XtEHR to the corresponding API. 
+This document explores the different APIs that are relevant in the context of EHDS. The purpose of this document is to create a shared terminology and architecture related to those APIs, and provide initial options and background for elements related to these APIs and allow linkage of EHDS requirements defined by XtEHR to the corresponding API.
 EHDS overview
 The figure below shows an architectural view of the different APIs that are relevant in the context of EHDS.
  
-The figure shows the flow of data within and between different member states. It identifies a of business actors and APIs relevant for EHDS. The APIs are presented in blue, the actors in black. 
+The figure shows the flow of data within and between different member states. It identifies a of business actors and APIs relevant for EHDS. The APIs are presented in blue, the actors in black.
 
 <img src="./images/EHDS-overview.svg">
 
