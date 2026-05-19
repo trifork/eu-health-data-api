@@ -50,6 +50,8 @@
 <page key="ehds-annex-ii" name="EHDS Annex II - Essential Requirements"/>
 <page key="fhir-documents-vs-resources" name="FHIR Documents and Resources"/>
 <page key="functional" name="Functional Requirements"/>
+<page key="usecase-health-data-portal" name="Health Data Access Service"/>
+<page key="usecase-health-professional-portal" name="Health Professional Access Service"/>
 <page key="index" name="Home"/>
 <page key="priority-area-hdr" name="Hospital Discharge Report"/>
 <page key="implementation" name="Implementation"/>
@@ -69,8 +71,6 @@
 <page key="resourceExchange" name="Resource Exchange Patterns"/>
 <page key="example-patient-summary" name="Retrieve a European Patient Summary"/>
 <page key="toc" name="Table of Contents"/>
-<page key="usecase-health-data-portal" name="Use Case - Health Data Access Service"/>
-<page key="usecase-health-professional-portal" name="Use Case - Health Professional Access Service"/>
 <page key="usecase-wellness-app" name="Wellness App Access"/>
 <page key="priority-area-mpd" name="ePrescription / eDispensation (MPD)"/>
 </specification>

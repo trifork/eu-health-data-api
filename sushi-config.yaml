@@ -123,9 +123,9 @@ pages:
     usecase-cross-border-ncp.md:
       title: Cross-Border via NCP
     usecase-health-professional-portal.md:
-      title: Use Case - Health Professional Access Service
+      title: Health Professional Access Service
     usecase-health-data-portal.md:
-      title: Use Case - Health Data Access Service
+      title: Health Data Access Service
     usecase-wellness-app.md:
       title: Wellness App Access
   about.md:
@@ -186,6 +186,7 @@ menu:
     Document Exchange: document-exchange.html
     Resource Access: resource-access.html
   Implementation:
+    Overview: implementation.html
     Retrieve a European Patient Summary: example-patient-summary.html
     Organization-Internal Exchange: usecase-ehr-internal.html
     Cross-Organization via National Infrastructure: usecase-cross-org.html
