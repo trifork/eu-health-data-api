@@ -2,7 +2,7 @@ This IG defines the API contract for EHR systems under EHDS. The EHR system API 
 
 ### The EHDS Interoperability Landscape
 
-The diagram below shows the main EHDS actors and the API boundaries between them. Blue boxes represent API or scenario boundaries discussed by this IG.
+The diagram below shows the main EHDS actors and the API boundaries between them. The blue boxes represent deployment scenarios where the functionality described in this Implementation Guide can be used.
 
 <div>
   <figure class="figure">
@@ -40,11 +40,11 @@ Member States must operate the national and cross-border infrastructure that ena
 
 **Healthcare providers**
 
-Healthcare providers deploy one or more EHR systems for care delivery, including EHR systems which support *internal* clinical workflows within an organization as well as EHR systems which support *cross-organization* exchange with national infrastructure, for example to meet the member state requirement [Art. 23(5)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202500327#art_23) to connect their data to the national NCP for cross-border exchange.
+Healthcare providers deploy one or more EHR systems to support care delivery, including EHR systems which support *internal* clinical workflows within an organization as well as EHR systems which support *cross-organization* exchange with national infrastructure, for example to meet the member state requirement [Art. 23(5)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202500327#art_23) to connect their data to the national NCP for cross-border exchange.
 
 **EHR systems**
 
-EHR systems must conform to the Interoperability Component implemented in this IG. [Art. 25(1)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0327#art_25) requires EHR systems to include the European interoperability software component; [Annex II §2.1–2.4](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0327#anx_II) requires that component to provide and receive priority-category data in EEHRxF format. 
+EHR systems must conform to the Interoperability Component implemented in this IG. [Art. 25(1)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0327#art_25) requires EHR systems to include the European interoperability software component; [Annex II §2.1–2.4](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0327#anx_II) requires that component to provide and receive priority-category data in EEHRxF format.
 
 An EHR system may implement the API directly, or the capability may be delivered by an associated gateway or facade that is treated as part of the deployed EHR system. 
 
@@ -54,21 +54,16 @@ Wellness applications may optionally claim EHR interoperability component confor
 
 Wellness applications can also be used to support the EHDS Patient right to insert data into their EHR ([Art. 5](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202500327#art_5), [Art. 48(2)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202500327#art_48)). This use case is not defined in this IG, but is considered for future work. 
 
-Whether a wellness application connects directly to an EHR system directly or through the health data access service is not specified by the regulation and is left free to implementation.
+Whether a wellness application connects to an EHR system directly or through the health data access service is not specified by the regulation and is left free to implementation.
 
-### Use Cases
 
-EHR systems can be deployed in different scenario, described below:
+### Deployment Scenarios
 
-#### Deployment Scenarios
-
-- [**Organization-Internal Exchange**](usecase-ehr-internal.html) — How a healthcare provider using multiple EHR systems can connect them together.
+- [**Organization-Internal Exchange**](usecase-ehr-internal.html) — How a healthcare provider using multiple EHR systems can connect them together, to serve internal workflows or aggregate data for external exchange
 
 - [**Cross-Organization via National Infrastructure**](usecase-cross-org.html) — How EHR systems act as participants in national interoperability infrastructure to exchange data cross-organization.
 
-- [**Cross-Border via NCP**](usecase-cross-border-ncp.html) — How supports cross-border exchange of data via national interobperability infrastructure, National Contact Points, and MyHealth@EU.
-
-#### Access Service Scenarios
+- [**Cross-Border via NCP**](usecase-cross-border-ncp.html) — How EHR systems support cross-border exchange of data via national interoperability infrastructure, National Contact Points, and MyHealth@EU.
 
 - [**Health Professional Access Service**](usecase-health-professional-portal.html) — Health professionals accessing EEHRxF data through a member state access service.
 
@@ -76,6 +71,6 @@ EHR systems can be deployed in different scenario, described below:
 
 - [**Wellness App Access**](usecase-wellness-app.html) — Patients accessing their own health data via Wellness Applications.
 
-#### Walkthrough
+#### End-to-End Use Cases
 
 - [**Retrieve a European Patient Summary**](example-patient-summary.html) — Step-by-step: authorization, patient lookup, document query, and document retrieval.
