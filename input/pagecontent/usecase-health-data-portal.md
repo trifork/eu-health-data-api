@@ -8,12 +8,8 @@ This IG defines the API the access service uses when querying EHR systems. The a
 
 ### Participants
 
-- **Health Data Access Service** — [Document Consumer](actors.html#document-consumer) and/or [Resource Consumer](actors.html#resource-consumer)
+- **Health Data Access Service** — [Document Consumer](actors.html#document-consumer) and/or [Resource Consumer](actors.html#resource-consumer). [Document Publisher](actors.html#document-publisher) for Patient-provided data.
 - **EHR system** — [Document Access Provider](actors.html#document-access-provider) and/or [Resource Access Provider](actors.html#resource-access-provider)
-
-#### Patient data submission 
-
-Articles 5 give patients the right to insert data into to their health record using the Health Data Access Service. In this context, a Health Data Access service may also act as a [Document Publisher](actors.html#document-publisher), submitting patient-sourced documents to an EHR system via ITI-105. Patient-sourced content may be tagged using `.meta.security` or `Provenance` resources to distinguish it from clinician-authored data. Full specification of the patient submission workflow is future work; see the [Wellness App](usecase-wellness-app.html) use case for related discussion.
 
 ### Workflow
 
@@ -25,3 +21,7 @@ Articles 5 give patients the right to insert data into to their health record us
 ### Authorization
 
 The patient's identity and authorization are established at the access service. At the EHR API surface, the consumer is an authorized system-to-system caller; the mechanism is described in [Authorization](authorization.html). Patient consent preferences are enforced by the access service and/or the EHR system per Member State policy.
+
+#### Patient-Provided Data 
+
+Articles 5 give patients the right to insert data into to their health record using the Health Data Access Service. In this context, a Health Data Access service could also act as a [Document Publisher](actors.html#document-publisher), submitting patient-sourced documents to an EHR system via ITI-105. Patient-sourced content may be tagged using `.meta.security` or `Provenance` resources to distinguish it from clinician-authored data (informative; see content specifications). See the [Wellness App](usecase-wellness-app.html) for a related use case where wellness applications are used to submit patient-provided data.
