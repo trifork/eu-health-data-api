@@ -11,9 +11,9 @@ This IG defines the API the access service uses when querying EHR systems. The a
 - **Health Data Access Service** — [Document Consumer](actors.html#document-consumer) and/or [Resource Consumer](actors.html#resource-consumer)
 - **EHR system** — [Document Access Provider](actors.html#document-access-provider) and/or [Resource Access Provider](actors.html#resource-access-provider)
 
-#### Patient data submission (informative)
+#### Patient data submission 
 
-Articles 5 and 6 of the EHDS Regulation give patients rights that include submitting data to their health record. In this context an EHR system may also act as a [Document Publisher](actors.html#document-publisher), receiving patient-sourced documents via ITI-105. Patient-sourced content may be tagged using `.meta.security` or `Provenance` resources to distinguish it from clinician-authored data. Full specification of the patient submission workflow is future work; see the [Wellness App](usecase-wellness-app.html) use case for related discussion.
+Articles 5 give patients the right to insert data into to their health record using the Health Data Access Service. In this context, a Health Data Access service may also act as a [Document Publisher](actors.html#document-publisher), submitting patient-sourced documents to an EHR system via ITI-105. Patient-sourced content may be tagged using `.meta.security` or `Provenance` resources to distinguish it from clinician-authored data. Full specification of the patient submission workflow is future work; see the [Wellness App](usecase-wellness-app.html) use case for related discussion.
 
 ### Workflow
 
