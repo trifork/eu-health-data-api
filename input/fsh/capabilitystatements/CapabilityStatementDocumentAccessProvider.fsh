@@ -235,6 +235,13 @@ indexes document metadata for queries by Document Consumers.
 * rest[=].resource[=].searchParam[=].extension[=].valueCode = #SHALL
 * rest[=].resource[=].searchParam[=].documentation = "Family name of document author"
 
+* rest[=].resource[=].searchParam[+].name = "creation"
+* rest[=].resource[=].searchParam[=].definition = "https://profiles.ihe.net/ITI/MHD/SearchParameter/DocumentReference-Creation"
+* rest[=].resource[=].searchParam[=].type = #date
+* rest[=].resource[=].searchParam[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].searchParam[=].extension[=].valueCode = #SHALL
+* rest[=].resource[=].searchParam[=].documentation = "When this document was created (DocumentReference.content.attachment.creation) - clinical document creation time, distinct from date (metadata indexing time)"
+
 // Additional search parameters - MAY support
 * rest[=].resource[=].searchParam[+].name = "_lastupdated"
 * rest[=].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
@@ -259,6 +266,30 @@ Served via ITI-68 Retrieve Document.
 * rest[=].resource[=].interaction[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[=].resource[=].interaction[=].extension[=].valueCode = #SHALL
 * rest[=].resource[=].interaction[=].documentation = "Retrieve document content (ITI-68)"
+
+* rest[=].resource[=].updateCreate = false
+* rest[=].resource[=].conditionalCreate = false
+* rest[=].resource[=].conditionalUpdate = false
+* rest[=].resource[=].conditionalDelete = #not-supported
+
+// ============================================================================
+// Bundle resource - ITI-68 retrieve (FHIR Documents)
+// ============================================================================
+* rest[=].resource[+].type = #Bundle
+* rest[=].resource[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].extension[=].valueCode = #SHALL
+* rest[=].resource[=].documentation = """
+FHIR Documents (e.g. Patient Summary / IPS, Laboratory Report) are retrieved as native
+FHIR Document Bundles via ITI-68 Retrieve Document, using the URL in
+DocumentReference.content.attachment.url. This IG requires FHIR Documents to be served as
+Bundles rather than wrapped in Binary.
+"""
+
+// ITI-68: Retrieve FHIR Document Bundle
+* rest[=].resource[=].interaction[+].code = #read
+* rest[=].resource[=].interaction[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[=].resource[=].interaction[=].extension[=].valueCode = #SHALL
+* rest[=].resource[=].interaction[=].documentation = "Retrieve FHIR Document Bundle content (ITI-68)"
 
 * rest[=].resource[=].updateCreate = false
 * rest[=].resource[=].conditionalCreate = false
