@@ -8,8 +8,8 @@ How the server (Document Access Provider) stores or builds that document does no
 
 ### Backend Implementation Patterns
 
-- **FHIR server** — A FHIR server holding individual FHIR resources may produce FHIR documents on demand by assembling these resources into a FHIR Document (for example, a Patient Summary via `$summary`) or it can serve FHIR documents it has persisted. A FHIR server may also expose the underlying clinical resources directly through [Resource Access](resource-access.html).
-- **[Proxy to XDS Infrastructure](https://profiles.ihe.net/ITI/MHD/1336_cross_profile_considerations.html#13361-mhd-actor-grouped-with-xds-infrastructure)** — an MHD layer over an existing XDS/XCA repository of persistent documents; it maps each XDS [`DocumentEntry`](https://profiles.ihe.net/ITI/MHD/32_fhir_maps.html#3451-metadata-object-types-mapped-to-fhir) onto a FHIR `DocumentReference`.
+- **FHIR server**: A FHIR server holding individual FHIR resources may produce FHIR documents on demand by assembling these resources into a FHIR Document (for example, a Patient Summary via `$summary`) or it can serve FHIR documents it has persisted. A FHIR server may also expose the underlying clinical resources directly through [Resource Access](resource-access.html).
+- **[Proxy to XDS Infrastructure](https://profiles.ihe.net/ITI/MHD/1336_cross_profile_considerations.html#13361-mhd-actor-grouped-with-xds-infrastructure)**: an MHD layer over an existing XDS/XCA repository of persistent documents; it maps each XDS [`DocumentEntry`](https://profiles.ihe.net/ITI/MHD/32_fhir_maps.html#3451-metadata-object-types-mapped-to-fhir) onto a FHIR `DocumentReference`.
 
 In MHD, the `attachment.url` is opaque, the consumer simply gets it from the [ITI-68](https://profiles.ihe.net/ITI/MHD/ITI-68.html) response. Depending on the deployment, the URL might resolve to:
 - An FHIR operation that assembles a document on demand, such as the IPS [`$summary`](https://build.fhir.org/ig/HL7/fhir-ips/OperationDefinition-summary.html) operation (`[base]/Patient/[id]/$summary`)
@@ -39,8 +39,8 @@ An ITI-67 search returns one `DocumentReference` per retrievable document. The m
 
 Regardless of backend or assembly mode, a Document Access Provider meets the same API requirements:
 
-- **Query** — it accepts the search parameters defined in the [Document Access Provider CapabilityStatement](CapabilityStatement-EEHRxF-DocumentAccessProvider.html) for ITI-67.
-- **Return** — every `DocumentReference` it returns conforms to the [`EehrxfMhdDocumentReference`](StructureDefinition-EehrxfMhdDocumentReference.html) profile.
+- **Query**: it accepts the search parameters defined in the [Document Access Provider CapabilityStatement](CapabilityStatement-EEHRxF-DocumentAccessProvider.html) for ITI-67.
+- **Return**: every `DocumentReference` it returns conforms to the [`EehrxfMhdDocumentReference`](StructureDefinition-EehrxfMhdDocumentReference.html) profile.
 
 These fix the shape of the query and its results, not how the server stores or builds documents.
 
