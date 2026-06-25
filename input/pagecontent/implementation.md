@@ -1,6 +1,6 @@
 This IG defines the API surface for the interoperability component under EHDS. EHR systems are one part of a broader interoperability landscape: Member States operate national and cross-border infrastructure, healthcare providers deploy EHR systems, and EHR systems expose interoperability component capabilities that national and access-service infrastructure can use.
 
-This page provides *informative* guidance for how the interoperability component fits into the EHDS interoperability landscape and supports different actors in meeting their EHDS obligations.
+This page provides *informative* guidance for how EHR systems supporting the interoperability component fit into the EHDS interoperability landscape and can **support** different actors in meeting their EHDS obligations.
 
 ### The EHDS Interoperability Landscape
 
