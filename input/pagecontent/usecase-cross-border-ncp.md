@@ -16,8 +16,8 @@ NCP-to-NCP exchange over MyHealth@EU is governed by the [NCPeH API specification
 ### Architecture
 
 ```
-Country B facility → NCP-B → MyHealth@EU → NCP-A → National infrastructure → EHR system
-                       └──── NCPeH API ────┘        └──── MS choice ────┘     └── This IG ──┘
+Country B facility → NCP-B → MyHealth@EU → NCP-A → National infrastructure →  EHR system
+                       └──── NCPeH API ────┘        └──── MS choice ────┘     └ This IG ┘
 ```
 
 All layers exchange EEHRxF-formatted data.

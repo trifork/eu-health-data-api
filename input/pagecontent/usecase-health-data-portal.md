@@ -9,7 +9,7 @@ This IG defines the interoperability component API surface the access service us
 ### Participants
 
 - **Health Data Access Service** — [Document Consumer](actors.html#document-consumer) and/or [Resource Consumer](actors.html#resource-consumer). [Document Publisher](actors.html#document-publisher) for Patient-provided data.
-- **EHR system** — [Document Access Provider](actors.html#document-access-provider) and/or [Resource Access Provider](actors.html#resource-access-provider)
+- **EHR system** — [Document Access Provider](actors.html#document-access-provider) and/or [Resource Access Provider](actors.html#resource-access-provider). Depending on the context, this could be a national EHR system or a healthcare provider EHR system, or other.
 
 ### Workflow
 
@@ -24,4 +24,4 @@ The patient's identity and authorization are established at the access service. 
 
 #### Patient-Provided Data 
 
-Article 5 gives patients the right to insert information into their EHR through the Health Data Access Service or applications linked to that service. In this context, a Health Data Access Service can support patient-provided data directly, or establish the authorization and linking context used by a wellness application. For the EHR-facing document case, the Health Data Access Service or linked application could act as a [Document Publisher](actors.html#document-publisher), submitting patient-sourced documents to an EHR system via ITI-105. Patient-sourced content may be tagged using `.meta.security` or `Provenance` resources to distinguish it from clinician-authored data (informative; see content specifications). See the [Wellness App](usecase-wellness-app.html) for the linked-application case.
+Article 5 gives patients the right to insert information into their EHR through the Health Data Access Service or via linked wellness applications. In this context, a Health Data Access Service can support patient-provided data directly, or establish the authorization and linking context used by a wellness application. For the EHR-facing document case, the Health Data Access Service could act as a [Document Publisher](actors.html#document-publisher), submitting patient-sourced documents to an EHR system via ITI-105. Patient-sourced content may be tagged using `.meta.security` or `Provenance` resources to distinguish it from clinician-authored data (informative; see content specifications). See the [Wellness App](usecase-wellness-app.html) for the linked-application case.
