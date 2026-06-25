@@ -1,6 +1,6 @@
 ### Overview
 
-A wellness application is software intended for use by a natural person to process electronic health data for health information or care outside healthcare ([Art. 2](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202500327#art_2_ab)).
+A wellness application is software, or a combination of hardware and software, intended for use by a natural person to process electronic health data for information on a person's health or for the delivery of care for purposes other than the provision of healthcare ([Art. 2(2)(ab)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202500327#art_2_ab)).
 
 Under EHDS, wellness application interoperability is not a separate API defined by this IG. A wellness application may claim interoperability with an EHR system only when the relevant common specifications and Annex II requirements are met ([Art. 47-48](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202500327#art_47)). Article 48 limits sharing or transmission of data from the wellness application to the patient's Article 5 right to insert information into their EHR, with patient consent and control over the categories and circumstances of sharing.
 

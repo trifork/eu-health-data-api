@@ -27,7 +27,7 @@ Documents are stored artifacts. This covers two common implementations:
 
 **FHIR Document Store** — a FHIR server that persists `DocumentReference` resources and associated content (Binary or Bundle). Publishers submit via ITI-105 (Simplified Publish) or ITI-65 (Provide Document Bundle). ITI-67 queries the stored metadata; ITI-68 retrieves the stored content.
 
-**XDS Proxy** — an MHD translation layer over a XDS/XCA repository. FHIR API calls are translated to XDS transactions against the underlying registry and repository. `DocumentReference` maps directly to XDS `DocumentEntry` per MHD's normative mapping. Existing national XDS investments require no replacement.
+**XDS Proxy** — an MHD translation layer over a XDS/XCA repository. FHIR API calls are translated to XDS transactions against the underlying registry and repository. MHD defines mappings between FHIR `DocumentReference` and XDS `DocumentEntry` metadata; this allows existing national XDS investments to remain in place.
 
 Both expose `DocumentReference` resources conforming to `EehrxfMhdDocumentReference`. XDS-backed systems that need richer XDS/XCA metadata should use the metadata capabilities and mappings defined by MHD; this IG does not scope full XDS metadata conformance.
 
@@ -49,4 +49,4 @@ A consumer using ITI-67 and ITI-68 cannot tell which approach the server uses �
 | ITI-105 publish used? | No | Optional |
 | XDS/XCA backend? | No | Optional |
 
-[IHE MHD](https://profiles.ihe.net/ITI/MHD/) enables this interoperability: `DocumentReference` maps to XDS `DocumentEntry`, allowing FHIR servers and XDS systems to participate in the same document exchange network.
+[IHE MHD](https://profiles.ihe.net/ITI/MHD/) enables this interoperability by defining mappings between FHIR `DocumentReference` and XDS `DocumentEntry` metadata, allowing FHIR servers and XDS systems to participate in the same document exchange network.

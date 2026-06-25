@@ -1,7 +1,7 @@
 {% include variable-definitions.md %}
 This section defines the API requirements for EHR systems that provide diagnostic imaging reports conforming to the [EU Imaging Report IG](https://build.fhir.org/ig/hl7-eu/imaging-r5/).
 
-> **Note:** The EU Imaging Report IG is currently published on FHIR R5, which is preparatory groundwork for FHIR R6. The production target for this IG is R6.
+> **Note:** The referenced EU Imaging Report content IG is currently published on FHIR R5 as groundwork for future R6 content specifications. This API IG remains FHIR R4; production implementations should track the applicable R6 imaging content specification when available.
 
 ### Actors
 

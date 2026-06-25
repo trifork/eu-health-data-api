@@ -2,7 +2,7 @@
 
 Provider-internal exchange describes how a healthcare provider can use the same interoperability component capabilities within its own environment.
 
-This page is informative. EHDS does not require provider-internal workflow changes. It shows where the interoperability component API surface defined in this IG can support internal exchange, aggregation for external exchange, or both.
+This page is informative: EHDS does not require provider-internal workflow changes. Healthcare providers already use many interoperability standards and local integration patterns that are not covered here. This page does not model all provider-internal exchange; it focuses on where the interoperability component capabilities defined in this IG can be used within a healthcare provider environment to **support** internal exchange.
 
 <div>
   <figure class="figure">
@@ -14,20 +14,22 @@ This page is informative. EHDS does not require provider-internal workflow chang
   <p></p>
 </div>
 
-A healthcare provider may deploy multiple EHR systems. Those systems may expose document or resource access directly, or the provider may use a gateway, facade, aggregator, or registry-style deployment to present a single EHR system boundary. See [EHR System Composition Patterns](ehr-system-composition.html).
+A healthcare provider commonly deploys multiple EHR systems. Those systems may expose document or resource access directly, or the provider may use a gateway, facade, aggregator, or registry-style deployment to present a single EHR system boundary. See [EHR System Composition Patterns](ehr-system-composition.html).
 
-When the provider connects to national infrastructure, the gateway-facing EHR system is responsible for making provider data available through the API surface expected by the Member State. Provider-internal exchange and national exchange can use the same interoperability component capabilities, but they are separate deployment contexts.
+In provider-internal exchange, EHR systems may also act as [Document Consumers](actors.html#document-consumer) or [Resource Consumers](actors.html#resource-consumer) when retrieving EEHRxF data from another internal system or a provider-level gateway.
+
+When the provider connects to national infrastructure, the gateway-facing EHR system is responsible for making provider data available through the API surface expected by the Member State. Provider-internal exchange and national exchange can use the same interoperability component capabilities, but they are separate deployment contexts with separate requirements.
 
 ### Participants
 
-- **EHR systems** — systems within the healthcare provider. They can act as [Document Access Providers](actors.html#document-access-provider), [Resource Access Providers](actors.html#resource-access-provider), and/or [Document Publishers](actors.html#document-publisher).
+- **EHR systems** — systems within the healthcare provider. They can act as [Document Consumers](actors.html#document-consumer), [Resource Consumers](actors.html#resource-consumer), [Document Access Providers](actors.html#document-access-provider), [Resource Access Providers](actors.html#resource-access-provider), and/or [Document Publishers](actors.html#document-publisher).
 - **Gateway, facade, aggregator, or registry** — an implementation pattern used to expose provider data through a single EHR system boundary. See [EHR System Composition Patterns](ehr-system-composition.html).
 - **Healthcare professionals** — users within the healthcare provider who may access EEHRxF information through local EHR workflows. User-facing workflow requirements are outside this IG.
 - **National infrastructure** — external infrastructure that may consume provider data for cross-organization exchange, access services, or cross-border exchange.
 
-### Requirements
+### Environment-Specific Considerations
 
-Specific requirements related to this environment include:
+Considerations related to this environment include:
 
 * Regulatory
   * The EHDS regulation does not contain specific provider-internal exchange requirements.
