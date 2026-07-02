@@ -17,8 +17,8 @@
 ### Regulatory Basis
 
 The European Health Data Space (EHDS) regulation describes an obligation for EHR systems to include an Interoperability Component that does the following:
-- §2.1: "SHALL provide an **interface enabling access** to the personal electronic health data [formatted in EEHRxF]"
-- §2.2: "SHALL **be able to receive** personal electronic health data [formatted in EEHRxF]"
+- [EHDS Annex II §2.1](https://eur-lex.europa.eu/eli/reg/2025/327/oj/eng#anx_II): "SHALL provide an **interface enabling access** to the personal electronic health data [formatted in EEHRxF]"
+- [EHDS Annex II §2.2](https://eur-lex.europa.eu/eli/reg/2025/327/oj/eng#anx_II): "SHALL **be able to receive** personal electronic health data [formatted in EEHRxF]"
 
 This Implementation Guide:
 1. **Defines a set of EHR functionalities that meet the Interoperability Component requirements:** describes how existing IHE profiles and other specifications can be used to provide secure access and enable secure exchange of EEHRxF data between systems.
@@ -42,11 +42,13 @@ The intended audiences of this Implementation Guide are:
 
 - **Architects of national infrastructures:** National eHealth agencies looking to understand how to use the capabilities of EHRs required by EHDS to meet the goals of EHDS in their Member States should refer to the [Implementation](implementation.html) for examples of how the EHR APIs can be used for the EHDS use cases.
 
+- **Manufacturers of wellness applications:** Vendors of wellness applications claiming interoperability with an EHR system (EHDS Articles 47–48), looking to either access data from EHR systems or write data into an EHR system.
+
 ### Summary of Functional Requirements ("the API")
 
 - **[Capability Discovery](capability-discovery.html)** - Discover which priority categories a server supports
 - **[Authorization](authorization.html)** - SMART Backend Services (IUA actor model)
-- **[Patient Matching](patient-match.html)** - PDQm Patient Demographics Query
+- **[Patient Lookup](patient-match.html)** - PDQm Patient Demographics Query
 - **[Document Exchange](document-exchange.html)** - MHD transactions (ITI-67, ITI-68, ITI-105)
 - **[Resource Access](resource-access.html)** - International Patient Access (IPA) resource query patterns
 
@@ -59,14 +61,13 @@ We define exchange patterns by inheriting and defining transactions, system acto
 - [IHE IUA](https://profiles.ihe.net/ITI/IUA/index.html) - Defines authorization and access control actors and mechanisms. Aligned with SMART. We use the actors and transactions model from this specification.
 - [IHE PDQm](https://profiles.ihe.net/ITI/PDQm/index.html) - Defines how a client can perform patient lookup against a server.
 - [HL7 International Patient Access (IPA)](https://hl7.org/fhir/uv/ipa/) - Defines how an application accesses patient information using SMART authorization and resource query. International Patient Access is the primary reference for resource access patterns in this IG.
-- [IHE QEDm](https://profiles.ihe.net/PCC/QEDm/index.html) - Defines how a client can query for existing FHIR resources from a FHIR server. Referenced where compatible with IPA.
 
 We define composite actors that inherit and combine actors defined in these existing specifications. See [Actors and Transactions](actors.html) for detailed actor definitions, transactions, and actor grouping.
 
 At a high level, the following actors are specified:
 
 <div style="max-width: 80%; margin: 0 auto;">
-{% include img.html img="actors_overall.png" caption="Figure: Actor Overview" %}
+{% include img.html img="actors_overall.png" caption="Figure 1: Actor Overview" %}
 </div>
 
 ## Document Exchange Actors
@@ -98,6 +99,3 @@ For medication data, this IG covers reading medication resources (MedicationRequ
 
 See the [HL7 Europe Implementation Guides registry](https://confluence.hl7.org/spaces/HEU/pages/358255737/Implementation+Guides) for the canonical list of Content IGs and their current publication URLs.
 
-## Authors
-
-{% include contributors.md %}
